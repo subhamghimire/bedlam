@@ -1,6 +1,7 @@
 .mainContent {
   justify-content: center;
-  margin: 0 auto;
+  margin: 0;
+  width: 90% !important;
 }
 
 .wrapper {
@@ -145,5 +146,5 @@
 }
 
 .productDescription {
-  width: 80%;
+  width: 100%;
 }

@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Home from './views/home/Home'
 import Store from './views/store/Store'
 import Product from './views/store/product/Product'
-import Checkout from './views/checkout/Checkout'
 
 export default function App() {
   return (
@@ -18,8 +17,6 @@ export default function App() {
           <Route path="/stockist" exact component={Stockist} />
           <Route path="/news" exact component={News} />
         <Route path="/contact-us" exact component={ContactUs} /> */}
-
-        <Route path="/cart" exact component={Checkout} />
       </Switch>
     </Router>
   )
