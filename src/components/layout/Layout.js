@@ -20,10 +20,7 @@ export default observer(({ title, children }) => {
         <div>
           <Sidebar />
         </div>
-        <div className="pl-24">{children}</div>
-        <div>
-          <Nav />
-        </div>
+        <div className="pl-32 pt-20">{children}</div>
       </div>
     </div>
   )

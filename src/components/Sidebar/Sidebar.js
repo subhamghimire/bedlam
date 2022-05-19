@@ -9,9 +9,9 @@ export default function Sidebar() {
 
   return (
     <div>
-      <div className="sidebar fixed h-screen inset-y-0 left-0 ">
+      <div className="sidebar absolute h-screen inset-y-0 left-0 ">
         <div class="my-6">
-          <div onClick={() => setMenu(true)}>
+          <div onClick={() => setMenu(!showMenu)}>
             <div className={cls({ [styles.disabledEvents]: !showMenu })}>
               <Logo size={80} className={styles.logo} />
             </div>

@@ -28,7 +28,7 @@ export default observer(() => {
             >
               <div>
                 <Link to="/store/tshirts" className={styles.storeMenuLink}>
-                  T-SHIRTS
+                  T-SHIRT
                 </Link>
               </div>
               <div>
