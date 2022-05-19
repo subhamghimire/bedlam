@@ -12,7 +12,6 @@
   font-weight: 900;
   margin-right: 33px;
   transition: 0.2s;
-
   &:hover {
     color: #000;
   }
@@ -24,17 +23,12 @@
 
 .menuContainer {
   min-height: 180px;
-  position: absolute;
-  top: -200px;
-  right: -20px;
   display: flex;
   justify-content: space-around;
   min-width: 140px;
-  border-radius: 10px;
   background-color: #fff;
   flex-direction: column;
   align-content: center;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3%);
   & div {
     text-align: center;
   }
