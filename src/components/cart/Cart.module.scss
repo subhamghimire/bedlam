@@ -1,0 +1,99 @@
+.root {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.cart {
+  background-color: #2b2b74;
+  padding: 10px;
+  width: 60vw;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cartBorder {
+  border: 3px solid #2b2b74;
+  border-radius: 21px;
+  padding: 20px;
+  padding-bottom: 0;
+  background-color: #fff;
+  margin: 10px;
+  position: relative;
+}
+
+.product {
+  padding: 0 5px;
+}
+
+.productContainer {
+  position: relative;
+  top: -30px;
+}
+
+.image {
+  height: 90px;
+  display: block;
+  margin: auto;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.info {
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.totals {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.button {
+  background-color: #2b2b74;
+  display: block;
+  padding: 10px;
+  font-size: 24px;
+  margin: 0 10px;
+  width: 214px;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 0;
+}
+
+.closeStore {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+
+  svg {
+    fill: #2b2b74;
+  }
+}
+
+.deleteItem {
+  position: relative;
+  top: -20px;
+  left: 80%;
+  cursor: pointer;
+
+  svg {
+    fill: #2b2b74;
+  }
+}

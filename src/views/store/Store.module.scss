@@ -1,0 +1,47 @@
+.gridItem {
+  padding: 10px 25px;
+}
+
+.product {
+  background-color: #fff;
+  padding-bottom: 100%;
+  border: 4px solid #fff;
+  transition: 0.2s;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .productTitle {
+      opacity: 1;
+    }
+  }
+}
+
+.productContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  max-width: 95%;
+  display: block;
+  flex-shrink: 1;
+}
+
+.productTitle {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 18px;
+  margin: 0;
+  opacity: 0;
+  transition: 0.2s;
+  color: #000;
+}
