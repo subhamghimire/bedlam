@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { observer, useLocalObservable } from 'mobx-react-lite'
 import rootStore from 'store'
 import styles from './Cart.module.scss'
 import Checkout from 'components/checkout/Checkout'
+import useOnClickOutside from 'partials/useOnClickOutside'
 
 export default observer(() => {
   useLocalObservable(() => {
@@ -12,7 +13,11 @@ export default observer(() => {
   })
   const [isExpanded, setExpanded] = useState(false)
 
+  const my_checkout = useRef()
+
   const cartImage = process.env.PUBLIC_URL + '/images/cart.png'
+
+  useOnClickOutside(my_checkout, () => setExpanded(false))
 
   if (!isExpanded) {
     return (
@@ -31,7 +36,9 @@ export default observer(() => {
 
   return (
     <div>
-      <Checkout />
+      <div ref={my_checkout}>
+        <Checkout />
+      </div>
     </div>
   )
 })
