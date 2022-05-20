@@ -10,6 +10,7 @@ import cls from 'classnames'
 
 export default observer(({ title, children }) => {
   const showOverlay = rootStore.showOverlay
+  const bedlam = process.env.PUBLIC_URL + '/images/bedlam.jpeg'
 
   console.log(showOverlay)
   return (
@@ -18,6 +19,9 @@ export default observer(({ title, children }) => {
         <div
           className={showOverlay ? styles.overlayEnabled : styles.overlay}
         ></div>
+        <div className="w-40 text-center mx-auto py-2">
+          <img src={bedlam} alt="" />
+        </div>
         <div>
           <Sidebar />
         </div>
