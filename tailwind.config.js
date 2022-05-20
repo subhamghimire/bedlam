@@ -62,10 +62,11 @@ module.exports = {
       secondary: '#e5eef6',
       ternary: '#7070701a',
       white: '#ffffff',
+      'light-green': '#CED3C9',
     }),
     extend: {
       boxShadow: {
-        'header-shadow': '5px 0 10px #e4e7ed;',
+        'checkout-shadow': '5px 0 10px #e4e7ed;',
       },
     },
   },

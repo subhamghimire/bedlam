@@ -3,23 +3,25 @@ import { observer, useLocalObservable } from 'mobx-react-lite'
 import Cart from 'components/cart/Cart'
 import Sidebar from 'components/Sidebar/Sidebar'
 import Policy from 'components/Policy/Policy'
+import rootStore from 'store'
 
 import styles from './Layout.module.scss'
 import cls from 'classnames'
 
 export default observer(({ title, children }) => {
-  const store = useLocalObservable(() => ({
-    showMenu: false,
-    storeMenu: false,
-  }))
+  const showOverlay = rootStore.showOverlay
 
+  console.log(showOverlay)
   return (
     <div className={cls(styles.root)}>
       <div>
+        <div
+          className={showOverlay ? styles.overlayEnabled : styles.overlay}
+        ></div>
         <div>
           <Sidebar />
         </div>
-        <div className="pl-32 pt-20">
+        <div className="pl-32">
           <div className="">
             <div className="w-full flex">
               {children}

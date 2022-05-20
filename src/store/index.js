@@ -1,4 +1,4 @@
-import {observable} from 'mobx'
+import { observable } from 'mobx'
 
 const store = observable({
   products: [
@@ -42,8 +42,8 @@ const store = observable({
   cart: {
     get total() {
       return store.cart.items.reduce((res, item) => {
-        const {price} = item.product
-        const {amount} = item
+        const { price } = item.product
+        const { amount } = item
 
         return res + amount * price
       }, 0)
@@ -53,7 +53,7 @@ const store = observable({
     },
     items: [],
   },
-  addToCart({product, amount, color, size}) {
+  addToCart({ product, amount, color, size }) {
     const cartItem = store.cart.items.find(
       (item) =>
         item.product.id === product.id &&
@@ -72,9 +72,12 @@ const store = observable({
     }
   },
   removeFromCart(product) {
-    const itemIndex = store.cart?.items.findIndex(item => product.id === item.product.id)
+    const itemIndex = store.cart?.items.findIndex(
+      (item) => product.id === item.product.id
+    )
     store.cart?.items.splice(itemIndex, 1)
-  }
+  },
+  showOverlay: false,
 })
 
 export default store

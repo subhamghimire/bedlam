@@ -4,6 +4,14 @@ import { useEffect, useState } from 'react'
 
 export default function Policy() {
   const [showPolicy, setPolicy] = useState(true)
+  useEffect(() => {
+    const policy = JSON.parse(localStorage.getItem('policy'))
+    if (policy) {
+      setPolicy(false)
+    } else {
+      localStorage.setItem('policy', JSON.stringify(showPolicy))
+    }
+  }, [showPolicy])
   return (
     <div>
       {showPolicy ? (
